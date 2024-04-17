@@ -13,12 +13,15 @@ body, html{
 .navBar{
     list-style: none;
     display: flex;
-    /* margin-bottom: 2%; */
     font-size: 25px;
-    /* background-color: rgba(240, 248, 255, 0.144); */
     height: 5rem;
     justify-content: end;
-    align-items: center;    
+    align-items: center;  
+    bottom: 0;
+    top: 0;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    position: sticky;
 }
 .btnNav{
     background-color: rgba(219, 219, 223, 0);
@@ -120,6 +123,10 @@ button:hover{
     margin-top:5%;
     border-top: solid rgba(255, 255, 255, 0.181) 1px;
     gap: 10rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 #root{
@@ -128,4 +135,55 @@ button:hover{
     padding: 0;
     width: 100%;
     height: 100%;
+}
+
+/* styles for product page */
+.mainContainerPageProducts{
+ padding: 0;
+ margin: 0;
+ top: 0 ;
+ bottom: 0;
+}
+
+.headerPageProducts{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 20em;
+    position: sticky;
+    margin-bottom: 5%;
+    width: 90rem;   
+    bottom: 12rem;
+
+    }
+
+    .textHeaderProducts{
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        /* width: 20em; */
+        height: 15em;
+        border: solid grey 2px;
+        padding: 3%;
+        border-radius: 2vh;
+        position: relative;
+        z-index: 1;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .asideBar{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 8%;
+    }
+.containerCards{
+    display: flex;
+    gap: 4rem;
 }
